@@ -27,7 +27,7 @@ public class SparkWebApp {
 "   </head>\n" +
 "	\n" +
 "   <body>\n" +
-"      <h2>INGRESE SUS DATOS :</h2>\n" +
+"      <h2>Bienvenido a la calculadora de medias y desviacion :</h2>\n" +
 "      <p>*Se debe de  ingresar los numeros separados por espacios y con \".\" puntos decimales en caso de requerirlo.</p>\n" +                
 "       <form action=\"/results\">\n" +
 "           Ingrese los datos:<br>\n" +
