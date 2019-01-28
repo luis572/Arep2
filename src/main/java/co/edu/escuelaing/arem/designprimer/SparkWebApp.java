@@ -9,8 +9,9 @@ public class SparkWebApp {
 	public static void main(String[] args) { 
         setPort(4567);
         port(getPort());
-        get("/", (req, res) -> calcdataPage(req, res));
-        get("/results", (req, res) -> answer(req,res));
+        get("/", (req, res) -> lectura(req, res));
+        get("/lectura", (req, res) -> lectura(req, res));
+        get("/results", (req, res) -> respuesta(req,res));
     }
     static int getPort() {
         if (System.getenv("PORT") != null) {
@@ -18,7 +19,7 @@ public class SparkWebApp {
         }
         return 4567; //returns default port if heroku-port isn't set(i.e. on localhost)
     }
-    private static String calcdataPage(Request req, Response res){
+    private static String lectura(Request req, Response res){
         String calcdataHTML = "<!DOCTYPE html>\n" +
 "<html>\n" +
 "   \n" +
@@ -40,7 +41,7 @@ public class SparkWebApp {
 "</html>";
         return calcdataHTML;
     }
-    public static String answer(Request req,Response resp) throws IOException, Exception{
+    public static String respuesta(Request req,Response resp) throws IOException, Exception{
 		String numeros = req.queryParams("datos1");
 		System.out.println(numeros);
 		String[] datosIngresados=numeros.split(" ");
