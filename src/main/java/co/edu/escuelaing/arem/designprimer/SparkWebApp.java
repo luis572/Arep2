@@ -9,5 +9,5 @@ public class SparkWebApp {
             return Integer.parseInt(System.getenv("PORT"));
         }
         return 4567; //returns default port if heroku-port isn't set(i.e. on localhost)
-    }
+}
 }
