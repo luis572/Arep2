@@ -50,9 +50,9 @@ public class SparkWebApp {
 			datos.add(Double.parseDouble(n));
 		}
 		// calculo de media
-		Double media=operacion.media(datos);
+		String  media=String.valueOf(operacion.media(datos));
 		//Calculo de desvicacion estandar
-		Double desviacion=operacion.desviacion(datos);
+		String desviacion=String.valueOf(operacion.desviacion(datos));
 		
 		
 		String respuesta="<!doctype html>\n" +
@@ -65,8 +65,8 @@ public class SparkWebApp {
 				"    <title>Document</title>\n" +
 				"</head>\n" +
 				"<body>\n" +
-				"La media para los datos ingresados es: "+String.format("%.2f",media)+"\n"+"<br>"+
-				"La desviacion para los datos ingresados  es: "+String.format("%.2f",desviacion)+"\n"+"<br>"+
+				"La media para los datos ingresados es: "+media+"\n"+"<br>"+
+				"La desviacion para los datos ingresados  es: "+desviacion+"\n"+"<br>"+
 				"\n" +
 				"</body>\n" +
 				"</html>";
